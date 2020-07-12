@@ -1,17 +1,3 @@
-<?php
-// Query params are: fb={{fb}} 
-
-require_once dirname(__FILE__) . '/kclient.php';
-$client = new KClient('https://bariup.site/api.php?', 'v6qhbvrcpfcq5sxxj8vkdch8q5md9vv4');
-$client->sendAllParams();       // to send all params from page query
-$client->forceRedirectOffer();       // redirect to offer if an offer is chosen
-// $client->param('sub_id_5', '123'); // you can send any params
-// $client->keyword('PASTE_KEYWORD');  // send custom keyword
-// $client->currentPageAsReferrer(); // to send current page URL as click referrer
-// $client->debug();              // to enable debug mode and show the errors
-// $client->execute();             // request to api, show the output and continue
-$client->executeAndBreak();     // to stop page execution if there is redirect or some output
-?>
 <!DOCTYPE html>
 <html amp >
 <head>
@@ -23,6 +9,7 @@ $client->executeAndBreak();     // to stop page execution if there is redirect o
   <link rel="shortcut icon" href="assets/images/logo1.png" type="image/x-icon">
   <meta name="description" content="">
   <meta name="amp-script-src" content="">
+  <script src="assets/js/jquery-3.5.1.min.js" type="text/javascript"></script>
   
   <title>Home</title>
   
